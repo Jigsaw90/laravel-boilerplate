@@ -17,7 +17,8 @@
         }
     ],
     "require": {
-        "php": "^8.3"
+        "php": "^8.0|^8.1|^8.2|^8.3",
+        "barryvdh/laravel-ide-helper": "^2.13"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
