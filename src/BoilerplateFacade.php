@@ -1,11 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace Jigsaw\Boilerplate;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Jigsaw\Boilerplate\Skeleton\SkeletonClass
+ * Class BoilerplateFacade
  */
 class BoilerplateFacade extends Facade
 {
@@ -14,7 +15,7 @@ class BoilerplateFacade extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return 'boilerplate';
     }

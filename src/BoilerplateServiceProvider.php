@@ -1,15 +1,21 @@
 <?php
+declare(strict_types=1);
 
 namespace Jigsaw\Boilerplate;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class BoilerplateServiceProvider
+ * @author   Marcin Gierus <marcin.gierus@monogo.pl>
+ * @package  Jigsaw\Boilerplate
+ */
 class BoilerplateServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
      */
-    public function boot()
+    public function boot(): void
     {
         /*
          * Optional methods to load your package assets
@@ -49,7 +55,7 @@ class BoilerplateServiceProvider extends ServiceProvider
     /**
      * Register the application services.
      */
-    public function register()
+    public function register(): void
     {
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'boilerplate');
