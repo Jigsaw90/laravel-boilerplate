@@ -1,0 +1,54 @@
+{
+    "name": "jigsaw/boilerplate",
+    "description": "Boilerplate package with custom composer dependencies for laravel projects",
+    "keywords": [
+        "jigsaw",
+        "boilerplate",
+        "laravel"
+    ],
+    "homepage": "https://github.com/jigsaw/boilerplate",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Marcin Gierus",
+            "email": "marcin.gierus@monogo.pl"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jigsaw\\Boilerplate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jigsaw\\Boilerplate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jigsaw\\Boilerplate\\BoilerplateServiceProvider"
+            ],
+            "aliases": {
+                "Boilerplate": "Jigsaw\\Boilerplate\\BoilerplateFacade"
+            }
+        }
+    }
+}
