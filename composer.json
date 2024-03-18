@@ -1,56 +1,60 @@
 {
-    "name": "jigsaw/boilerplate",
-    "description": "Boilerplate package with custom composer dependencies for laravel projects",
-    "keywords": [
-        "jigsaw",
-        "boilerplate",
-        "laravel"
-    ],
-    "version": "0.0.1",
-    "homepage": "https://github.com/jigsaw/boilerplate",
-    "license": "MIT",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Marcin Gierus",
-            "email": "marcin.gierus@monogo.pl"
-        }
-    ],
-    "require": {
-        "php": "^8.2|^8.3",
-        "barryvdh/laravel-debugbar": "^3.7",
-        "barryvdh/laravel-ide-helper": "^2.13"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Jigsaw\\Boilerplate\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Jigsaw\\Boilerplate\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Jigsaw\\Boilerplate\\BoilerplateServiceProvider"
-            ],
-            "aliases": {
-                "Boilerplate": "Jigsaw\\Boilerplate\\BoilerplateFacade"
-            }
-        }
+  "name": "jigsaw/boilerplate",
+  "description": "Boilerplate package with custom composer dependencies for laravel projects",
+  "keywords": [
+    "jigsaw",
+    "boilerplate",
+    "laravel"
+  ],
+  "version": "0.0.1",
+  "homepage": "https://github.com/jigsaw/boilerplate",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Marcin Gierus",
+      "email": "marcin.gierus@monogo.pl"
     }
+  ],
+  "require": {
+    "php": "^8.2|^8.3",
+    "barryvdh/laravel-debugbar": "^3.7",
+    "barryvdh/laravel-ide-helper": "^3.0",
+    "calebporzio/sushi": "^2.5",
+    "chihyulin66/laravel-json-helper": "^1.0",
+    "garygreen/pretty-routes": "^1.0",
+    "laravel/framework": "11.0.7",
+    "maatwebsite/excel": "^3.1"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0",
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jigsaw\\Boilerplate\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Jigsaw\\Boilerplate\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Jigsaw\\Boilerplate\\BoilerplateServiceProvider"
+      ],
+      "aliases": {
+        "Boilerplate": "Jigsaw\\Boilerplate\\BoilerplateFacade"
+      }
+    }
+  }
 }
