@@ -23,7 +23,7 @@
     "calebporzio/sushi": "^2.5",
     "chihyulin66/laravel-json-helper": "^1.0",
     "garygreen/pretty-routes": "^1.0",
-    "laravel/framework": "11.0.7",
+    "laravel/framework": "^11",
     "maatwebsite/excel": "^3.1"
   },
   "require-dev": {

@@ -32,6 +32,12 @@ class BoilerplateServiceProvider extends ServiceProvider
                 ], 'config'
             );
 
+            $this->publishes(
+                [
+                    __DIR__ . '/../pint/pint.json' => base_path('pint.json'),
+                ],'pint'
+            );
+
             // Publishing the views.
             /*$this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/boilerplate'),
