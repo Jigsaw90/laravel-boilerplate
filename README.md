@@ -25,3 +25,17 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 ### Laravel Package Boilerplate
 
 This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
+
+### Publishes
+
+To publish preconfigured pint.json file
+
+```bash
+php artisan vendor:publish --provider="Jigsaw\Boilerplate\BoilerplateServiceProvider" --tag="pint"
+```
+
+If you are using sail
+
+```bash
+./vendor/bin/sail php artisan vendor:publish --provider="Jigsaw\Boilerplate\BoilerplateServiceProvider" --tag="pint"
+```
